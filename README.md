@@ -7,8 +7,8 @@ otherwise type full part of file location (ex c:\folderName\unsorted-name.txt )
 
 and the program will short them by last-name at the first and then by fist-name.
 
-for example if you type file name c:/unsorted-names-list.txt
-that contain :
+for example if file name c:/unsorted-names-list.txt
+that containing these names :
 
 Orson Milka Iddins <br />
 Erna Dorey Battelle <br />
