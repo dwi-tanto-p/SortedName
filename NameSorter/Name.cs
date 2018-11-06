@@ -18,7 +18,7 @@ namespace NameSorter
             set
             {
                 var charSeparator = new[] {' '};
-                _nameArr = value.Split(charSeparator, StringSplitOptions.RemoveEmptyEntries);
+                _nameArr = value.Split(charSeparator, StringSplitOptions.RemoveEmptyEntries); //split value and remove empty entry
                 _fullName = string.Join(" ", _nameArr);
             }
         }
