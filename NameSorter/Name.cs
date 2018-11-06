@@ -10,7 +10,6 @@ namespace NameSorter
         public Name(string fullName)
         {
             FullName = fullName;
-            _nameArr = fullName.Split(' ');
         }
 
         public string FullName
@@ -18,9 +17,9 @@ namespace NameSorter
             get { return _fullName; }
             set
             {
-                _fullName = value;
-                _nameArr = value.Split(' ');
-                
+                var charSeparator = new[] {' '};
+                _nameArr = value.Split(charSeparator, StringSplitOptions.RemoveEmptyEntries);
+                _fullName = string.Join(" ", _nameArr);
             }
         }
       
@@ -67,6 +66,7 @@ namespace NameSorter
             throw new ArgumentException("Object is not a Name");
         }
 
+       
         public override string ToString()
         {
             return _fullName;

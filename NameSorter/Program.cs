@@ -33,7 +33,7 @@ namespace NameSorter
 
                 Console.WriteLine("========================================");
 
-                Console.WriteLine("Names are wrote in sorted-names-list.txt");
+                Console.WriteLine("Names are wrote in working-folder as sorted-names-list.txt");
 
 
                 Console.ReadLine();
