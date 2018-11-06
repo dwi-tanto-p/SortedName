@@ -57,14 +57,14 @@ namespace UnitTestName
 
         }
 
-     
+
 
         [TestMethod]
         public void TestLastNameAndFirstNameWithUnuseSpace()
         {
 
             //test 1
-            var name = new Name(" Abc a ");//unused space in head & tail
+            var name = new Name(" Abc a "); //unused space in head & tail
             var firstName = name.GetFirstName();
             var lastName = name.GetLastName();
             var fullName = name.FullName;
@@ -74,9 +74,9 @@ namespace UnitTestName
 
             //test 2
             name.FullName = " xx yy  zz"; //unused space in middle
-             firstName = name.GetFirstName();
-             lastName = name.GetLastName();
-             fullName = name.FullName;
+            firstName = name.GetFirstName();
+            lastName = name.GetLastName();
+            fullName = name.FullName;
             Assert.AreEqual("xx yy", firstName);
             Assert.AreEqual("zz", lastName);
             Assert.AreEqual("xx yy zz", fullName);

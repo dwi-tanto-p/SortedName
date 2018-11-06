@@ -41,8 +41,14 @@ namespace NameSorter
             return "";
         }
 
-        // implement IComparable interface
-        // this will be use for Array.Sort method
+       
+        /// <summary>
+        /// implement IComparable interface
+        /// this will be use for Array.Sort method
+        /// It will order base on LastName and then by FistName 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public int CompareTo(object obj)
         {
             var name = obj as Name;

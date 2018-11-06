@@ -18,7 +18,7 @@ namespace NameSorter
 
                 var location = Console.ReadLine();
 
-                var listName = GetListName(location);
+                var listName = GetListName(location); // Read File and return list of Name
 
                 listName.Sort(); //Sort class of Name implements IComparable
 
