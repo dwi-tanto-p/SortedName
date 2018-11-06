@@ -33,7 +33,7 @@ namespace NameSorter
 
                 Console.WriteLine("========================================");
 
-                Console.WriteLine("Names are wrote in working-folder as sorted-names-list.txt");
+                Console.WriteLine("Names are written in working-folder as sorted-names-list.txt");
 
 
                 Console.ReadLine();
@@ -55,7 +55,8 @@ namespace NameSorter
 
             while ((line = file.ReadLine()) != null)
             {
-                listName.Add(new Name(line));
+                if (line.Trim().Length != 0) //make sure that name not empty
+                    listName.Add(new Name(line));
             }
 
             file.Close();

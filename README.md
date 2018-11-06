@@ -5,7 +5,7 @@ This program will ask you text file that contain unsorted names list,
 for example if your text file in working-folder just type your file name (ex unsorted-name.txt)
 otherwise type full part of file location (ex c:\folderName\unsorted-name.txt )
 
-and the program will short them by first by  last-name and then by fist-name.
+and the program will short them by last-name at the first and then by fist-name.
 
 for example if you type file name c:/unsorted-names-list.txt
 that contain :
