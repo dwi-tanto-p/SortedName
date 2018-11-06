@@ -32,8 +32,8 @@ namespace NameSorter
                 CreateFile(listName);
 
                 Console.WriteLine("========================================");
-
-                Console.WriteLine("Names are written in working-folder as sorted-names-list.txt");
+                Console.WriteLine("");
+                Console.WriteLine("Note: Names are written in working-folder as sorted-names-list.txt");
 
 
                 Console.ReadLine();
