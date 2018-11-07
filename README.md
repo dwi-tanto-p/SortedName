@@ -1,6 +1,12 @@
 # SortedName
 
 
+This Solution is made using Visual Studio 2013<br />
+language : c#<br/>
+Type : Console Aplication<br/>
+
+
+# How it works
 This program will ask you text file that contain unsorted names list,
 for example if your text file in working-folder just type your file name (ex unsorted-name.txt)
 otherwise type full part of file location (ex c:\folderName\unsorted-name.txt )
