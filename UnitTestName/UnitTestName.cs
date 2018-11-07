@@ -9,9 +9,11 @@ namespace UnitTestName
     public class UnitTestName
     {
         [TestMethod]
-        public void TestMethod1()
+        [ExpectedException(typeof(IndexOutOfRangeException))] 
+        public void TestNameMustExist()
         {
-
+            var name = new Name("");
+           
         }
       
 
