@@ -13,8 +13,7 @@ otherwise type full part of file location (ex c:\folderName\unsorted-name.txt )
 
 and the program will short them by last-name at the first and then by fist-name.
 
-for example if file name c:/unsorted-names-list.txt
-that containing these names :
+for example if file that containing these names :
 
 Orson Milka Iddins <br />
 Erna Dorey Battelle <br />
