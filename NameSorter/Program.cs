@@ -13,23 +13,21 @@ namespace NameSorter
         {
             try
             {
+                IAssessment ass = new Assessment();
+
               
                 Console.WriteLine("Hallo please give me unsorted name list file:");
+                var fileToRead = Console.ReadLine();
+               
+                var listName = ass.ReadNameFromFile(fileToRead);
 
-                var location = Console.ReadLine();
 
-                var listName = GetListName(location); // Read File and return list of Name
+                ass.SordName(listName); //now sort listname
 
-                listName.Sort(); //Sort class of Name implements IComparable
+                Console.WriteLine("this data is after sorting");
+                ass.PrintName(listName); //display names
 
-                Console.WriteLine("Names after sorting are ...");
-                Console.WriteLine("========================================");
-                
-                //display sorted list
-                Display(listName);
-
-                //write sorted list in the file
-                CreateFile(listName);
+                ass.WriteNameToFile(listName, "sorted-names-list.txt");
 
                 Console.WriteLine("========================================");
                 Console.WriteLine("");
@@ -46,46 +44,6 @@ namespace NameSorter
 
         }
 
-        static List<Name> GetListName(string fileLocation)
-        {
-            string line;
-            var listName = new List<Name>();
-
-            var file = new StreamReader(fileLocation);
-
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.Trim().Length != 0) //make sure that name not empty
-                    listName.Add(new Name(line));
-            }
-
-            file.Close();
-            return listName;
-
-        }
-
-        static void Display(IEnumerable<Name> list)
-        {
-            foreach (var name in list)
-            {
-                Console.WriteLine(name.FullName);
-            }
-        }
-
-        static void CreateFile(IEnumerable<Name> list )
-        {
-             const string file = ".\\sorted-names-list.txt";
-          
-            using (StreamWriter sw = File.CreateText(file))
-            {
-                foreach (var dt  in list)
-                {
-                    sw.WriteLine(dt.FullName);
-                }
-               sw.Close();
-            }
-
-
-        }
+       
     }
 }
