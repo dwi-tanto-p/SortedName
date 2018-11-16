@@ -13,21 +13,21 @@ namespace NameSorter
         {
             try
             {
-                IAssessment ass = new Assessment();
+                IAssessment assessment = new Assessment();
 
               
                 Console.WriteLine("Hallo please give me unsorted name list file:");
                 var fileToRead = Console.ReadLine();
                
-                var listName = ass.ReadNameFromFile(fileToRead);
+                var listName = assessment.ReadNameFromFile(fileToRead);
 
 
-                ass.SordName(listName); //now sort listname
+                assessment.SordName(listName); //now sort listname
 
                 Console.WriteLine("this data is after sorting");
-                ass.PrintName(listName); //display names
+                assessment.PrintName(listName); //display names
 
-                ass.WriteNameToFile(listName, "sorted-names-list.txt");
+                assessment.WriteNameToFile(listName, "sorted-names-list.txt");
 
                 Console.WriteLine("========================================");
                 Console.WriteLine("");
